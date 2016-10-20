@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/2D 게임 프로그래밍.iml" filepath="$PROJECT_DIR$/.idea/2D 게임 프로그래밍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/2DGP.iml" filepath="$PROJECT_DIR$/.idea/2DGP.iml" />
     </modules>
   </component>
 </project>
