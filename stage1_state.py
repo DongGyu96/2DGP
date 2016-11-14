@@ -3,36 +3,8 @@ import stage2_state
 import main_state
 import math
 from pico2d import *
-
-class Ball:
-    def __init__(self, x, y, angle):
-        self.x = x
-        self.y = y
-        self.angle = angle
-        self.trace_x = [x] * 10
-        self.trace_y = [y] * 10
-        for n in range(0, 10):
-            self.trace_y[n] = y - (n * 5)
-
-    def update(self):
-        for n in range(1, 10):
-            self.trace_x[10 - n] = self.trace_x[9 - n]
-            self.trace_y[10 - n] = self.trace_y[9 - n]
-        self.trace_x[0] = self.x
-        self.trace_y[0] = self.y
-        self.count = 0
-
-
-
-class Block:
-    def __init__(self, x, y, type):
-        self.x = x
-        self.y = y
-        self.left = x - 85
-        self.right = x + 85
-        self.top = y + 30
-        self.bottom = y - 30
-        self.type = type
+from Ball_Object import Ball
+from Block_Object import Block
 
 name = "Stage1State"
 image = None
@@ -43,7 +15,6 @@ redball = None
 blueball_effect = None
 redball_effect = None
 pausebutton_image = None
-block_image = None
 move = False
 reverse = True
 RedBall = None
@@ -60,13 +31,9 @@ def enter():
     global blueball, blueball_effect
     global redball, redball_effect
     global running
-    global block_image
-    global block_effect_image
     global RedBall, BlueBall, blocks
     global pausemenu_image
     pausemenu_image = load_image('pause_image.png')
-    block_effect_image = load_image('block_effect.png')
-    block_image = load_image('block.png')
     circle = load_image('circle.png')
     blueball = load_image('blueball.png')
     redball = load_image('redball.png')
@@ -95,9 +62,7 @@ def exit():
 def update():
     if running == True:
        for block in blocks:
-           block.y -= 1.5
-           block.bottom -= 1.5
-           block.top -= 1.5
+           block.update()
 
        if move == True:
            if reverse == True:
@@ -136,9 +101,7 @@ def draw():
 
 
     for block in blocks:
-        block_effect_image.draw(block.x, block.y + 10)
-        block_effect_image.draw(block.x, block.y + 20)
-        block_image.draw(block.x, block.y)
+        block.Draw()
 
     text_image.draw(50,780)
     pausebutton_image.draw(470,770)
