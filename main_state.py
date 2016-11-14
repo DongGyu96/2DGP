@@ -1,6 +1,6 @@
 import game_framework
 import stage1_state
-import stage2_state
+import infinity_state
 from pico2d import *
 
 
@@ -65,10 +65,9 @@ def handle_events():
                 infinitybutton = True
         elif event.type == SDL_MOUSEBUTTONDOWN and event.button == SDL_BUTTON_LEFT:
             if (event.x > 80 and event.x < 420) and (event.y > 450 and event.y < 530):
-                game_framework.push_state(stage2_state)
-        #elif event.type == SDL_MOUSEBUTTONDOWN and event.button == SDL_BUTTON_LEFT:
-         #   if (event.x > 80 and event.x < 420) and (event.y > 550 and event.y < 630):
-         #       game_framework.push_state(infinity_state) ___무한 모드___
+                game_framework.push_state(stage1_state)
+            elif (event.x > 80 and event.x < 420) and (event.y > 550 and event.y < 630):
+                game_framework.push_state(infinity_state)
         else:
             if event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
                 game_framework.quit()

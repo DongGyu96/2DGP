@@ -6,7 +6,7 @@ from pico2d import *
 from Ball_Object import Ball
 from Block_Object import Block
 
-name = "Stage1State"
+name = "Stage1_State"
 image = None
 text_image = None
 circle = None
@@ -44,7 +44,7 @@ def enter():
     image = load_image('background.png')
     RedBall = Ball(390, 150, 0)
     BlueBall = Ball(110, 150, 180)
-    blocks = [Block(150, 700, 0), Block(350, 900, 0), Block(250, 1150, 0), Block(100, 1360, 0), Block(370, 1550, 0), Block(100, 1800, 0), Block(350, 2000, 0), Block(150, 2250, 0), Block(380, 2500, 0), Block(350, 2800, 0)]
+    blocks = [Block(150, 1000, 0), Block(350, 1200, 0), Block(250, 1450, 0), Block(100, 1660, 0), Block(370, 1850, 0), Block(100, 2100, 0), Block(350, 2400, 0), Block(150, 2550, 0), Block(380, 2800, 0), Block(350, 3100, 0)]
     running = True
     pass
 
@@ -66,11 +66,11 @@ def update():
 
        if move == True:
            if reverse == True:
-               BlueBall.angle -= 1.2
-               RedBall.angle -= 1.2
+               BlueBall.move(True)
+               RedBall.move(True)
            elif reverse == False:
-               BlueBall.angle += 1.2
-               RedBall.angle += 1.2
+               BlueBall.move(False)
+               RedBall.move(False)
 
        BlueBall.x = 250 + (math.cos(BlueBall.angle * math.pi / 180.0) * 140)
        BlueBall.y = 150 + (math.sin(BlueBall.angle * math.pi / 180.0) * 140)
@@ -86,7 +86,7 @@ def update():
            elif block.left < RedBall.x < block.right and block.bottom < RedBall.y < block.top:
                enter()
 
-    if blocks[len(blocks) - 1].y < -100:
+    if blocks[len(blocks) - 1].y < -300:
         game_framework.push_state(stage2_state)
     pass
 
@@ -146,8 +146,12 @@ def handle_events():
             elif event.type == SDL_KEYDOWN and event.key == SDLK_d:
                 move = True
                 reverse = True
-            elif event.type == SDL_KEYUP:
-                move = False
+            elif event.type == SDL_KEYUP and event.key == SDLK_a:
+                if reverse == False:
+                    move = False
+            elif event.type == SDL_KEYUP and event.key == SDLK_d:
+                if reverse == True:
+                    move = False
 
     pass
 

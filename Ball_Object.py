@@ -17,3 +17,9 @@ class Ball:
         self.trace_x[0] = self.x
         self.trace_y[0] = self.y
         self.count = 0
+
+    def move(self, reverse):
+        if reverse == True:
+            self.angle -= 3.6
+        elif reverse == False:
+            self.angle += 3.6

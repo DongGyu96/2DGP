@@ -1,12 +1,12 @@
 import game_framework
 import main_state
 import math
-import stage3_state
+import stage4_state
 from pico2d import *
 from Ball_Object import Ball
 from Block_Object import Block
 
-name = "Stage2_State"
+name = "Stage3_State"
 image = None
 text_image = None
 circle = None
@@ -39,12 +39,12 @@ def enter():
     redball = load_image('redball.png')
     blueball_effect = load_image('blueball_effect.png')
     redball_effect = load_image('redball_effect.png')
-    text_image = load_image('stage2.png')
+    text_image = load_image('stage3.png')
     pausebutton_image = load_image('pausebutton.png')
     image = load_image('background.png')
     RedBall = Ball(390, 150, 0)
     BlueBall = Ball(110, 150, 180)
-    blocks = [Block(120, 1100, 1), Block(120, 1380, 1), Block(120, 1660, 1), Block(120, 1940, 1), Block(350, 2220, 1), Block(120, 2500, 1)]
+    blocks = [Block(90, 1100, 2), Block(240, 1100, 2), Block(400, 1100, 2), Block(240, 1200, 2), Block(360, 1600, 1), Block(100, 1800, 0), Block(400, 2000, 0), Block(130, 2200, 1), Block(130, 2500, 1), Block(400, 2800, 0), Block(400, 3100, 0)]
     running = True
     pass
 
@@ -87,7 +87,7 @@ def update():
                enter()
 
     if blocks[len(blocks) - 1].y < -300:
-        game_framework.push_state(stage3_state)
+        game_framework.push_state(stage4_state)
     pass
 
 
