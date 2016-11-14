@@ -1,6 +1,6 @@
 import game_framework
 import main_state
-import math
+import random
 from pico2d import *
 from Ball_Object import Ball
 from Block_Object import Block
@@ -21,6 +21,9 @@ BlueBall = None
 blocks = None
 running = None
 pausemenu_image = None
+blocks_type = None
+font = None
+score = None
 
 def enter():
     global image
@@ -32,6 +35,9 @@ def enter():
     global running
     global RedBall, BlueBall, blocks
     global pausemenu_image
+    global blocks_type
+    global font
+    global score
     pausemenu_image = load_image('pause_image.png')
     circle = load_image('circle.png')
     blueball = load_image('blueball.png')
@@ -41,9 +47,12 @@ def enter():
     text_image = load_image('Infinity.png')
     pausebutton_image = load_image('pausebutton.png')
     image = load_image('background.png')
+    font = load_font('KOVERWATCH.TTF', 30)
+    blocks_type = random.randint(0, 9)
     RedBall = Ball(390, 150, 0)
     BlueBall = Ball(110, 150, 180)
-    blocks = [Block(250, 500, -1)]
+    set_blocks()
+    score = 0
     running = True
     pass
 
@@ -59,9 +68,14 @@ def exit():
 
 
 def update():
+    global blocks_type
+    global score
     if running == True:
        for block in blocks:
            block.update()
+           if block.y < 0 and block.type != -1:
+               score += 1
+               block.type = -1
 
        if move == True:
            if reverse == True:
@@ -85,8 +99,9 @@ def update():
            elif block.left < RedBall.x < block.right and block.bottom < RedBall.y < block.top:
                enter()
 
-    if blocks[len(blocks) - 1].y < -300:
-        enter()
+    if blocks[len(blocks) - 1].y < 0:
+        blocks_type = random.randint(0, 9)
+        set_blocks()
     pass
 
 
@@ -107,6 +122,8 @@ def draw():
     circle.draw(250,150)
     blueball.draw(BlueBall.x, BlueBall.y)
     redball.draw(RedBall.x, RedBall.y)
+
+    font.draw(230, 775, '%4d' % (score), (128, 128, 255))
 
     if running == False:
         pausemenu_image.draw(250,400)
@@ -153,6 +170,29 @@ def handle_events():
                     move = False
 
     pass
+
+def set_blocks():
+    global blocks
+    if blocks_type == 0:
+        blocks = [Block(125, 1000, 1), Block(425, 1160, 2), Block(75, 1080, 2), Block(375, 1250, 1), Block(250, 1750, 4), Block(475, 2170, 2), Block(25, 2170, 2), Block(350, 2250, 1), Block(0, 2300, -1)]
+    elif blocks_type == 1:
+        blocks = [Block(150, 1000, 0), Block(400, 1200, 0), Block(260, 1450, 0), Block(100, 1700, 1), Block(200, 2000, 2), Block(400, 2300, 1), Block(0, 2300, -1), Block(0, 2300, -1), Block(0, 2300, -1)]
+    elif blocks_type == 2:
+        blocks = [Block(100, 1000, 1), Block(100, 1250, 1), Block(100, 1500, 1), Block(100, 1750, 1), Block(400, 2000, 1), Block(100, 2250, 0), Block(0, 2300, -1), Block(0, 2300, -1), Block(0, 2300, -1)]
+    elif blocks_type == 3:
+        blocks = [Block(150, 1000, 3), Block(330, 1250, 3), Block(30, 1400, 3), Block(270, 1600, 3), Block(460, 1850, 3), Block(100, 2000, 3), Block(375, 2200, 3), Block(0, 2300, -1), Block(0, 2300, -1)]
+    elif blocks_type == 4:
+        blocks = [Block(50, 1300, 4), Block(450, 1300, 4), Block(250, 1500, 2), Block(100, 1900, 1), Block(400, 2150, 1), Block(100, 2300, 0), Block(0, 2300, -1), Block(0, 2300, -1), Block(0, 2300, -1)]
+    elif blocks_type == 5:
+        blocks = [Block(100, 1100, 0), Block(180, 1200, 0), Block(450, 1300, 0), Block(380, 1550, 3), Block(70, 1320, 3), Block(150, 1750, 0), Block(400, 2000, 1), Block(100, 2250, 1), Block(0, 2300, -1)]
+    elif blocks_type == 6:
+        blocks = [Block(100, 1000, 0), Block(300, 1250, 2), Block(100, 1500, 1), Block(400, 1750, 1), Block(200, 2000, 3), Block(400, 2200, 3), Block(100, 2200, 2), Block(450, 1500, 3), Block(0, 2300, -1)]
+    elif blocks_type == 7:
+        blocks = [Block(250, 1300, 4), Block(80, 1800, 3), Block(130, 1850, 3), Block(180, 1900, 3), Block(400, 2100, 3), Block(350, 2150, 3), Block(300, 2200, 3), Block(20, 2100, 0), Block(0, 2300, -1)]
+    elif blocks_type == 8:
+        blocks = [Block(90, 1100, 2), Block(240, 1100, 2), Block(400, 1100, 2), Block(240, 1200, 2), Block(360, 1600, 1), Block(100, 1800, 0), Block(400, 2000, 0), Block(130, 2200, 1), Block(0, 2300, -1)]
+    elif blocks_type == 9:
+        blocks = [Block(125, 1000, 1), Block(250, 1250, 0), Block(125, 1500, 1), Block(425, 1700, 3), Block(75, 1850, 0), Block(375, 1950, 3), Block(400, 2100, 1), Block(125, 2270, 0), Block(0, 2300, -1)]
 
 
 def pause():
