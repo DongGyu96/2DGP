@@ -19,25 +19,32 @@ reverse = True
 RedBall = None
 BlueBall = None
 blocks = None
+sub_blocks = None
+all_blocks = None
 running = None
 pausemenu_image = None
+failmenu_image = None
 blocks_type = None
+sub_blocks_type = None
 font = None
 score = None
+fail = None
+Boost = None
 
 def enter():
     global image
     global text_image
-    global pausebutton_image
+    global pausebutton_image, failmenu_image
     global circle
     global blueball, blueball_effect
     global redball, redball_effect
-    global running
-    global RedBall, BlueBall, blocks
+    global running, fail
+    global RedBall, BlueBall, blocks, sub_blocks, all_blocks
     global pausemenu_image
-    global blocks_type
+    global blocks_type , sub_blocks_type
     global font
     global score
+    global Boost
     pausemenu_image = load_image('pause_image.png')
     circle = load_image('circle.png')
     blueball = load_image('blueball.png')
@@ -47,13 +54,18 @@ def enter():
     text_image = load_image('Infinity.png')
     pausebutton_image = load_image('pausebutton.png')
     image = load_image('background.png')
+    failmenu_image = load_image('Fail_image.png')
     font = load_font('KOVERWATCH.TTF', 30)
     blocks_type = random.randint(0, 9)
+    sub_blocks_type = random.randint(0, 3)
     RedBall = Ball(390, 150, 0)
     BlueBall = Ball(110, 150, 180)
     set_blocks()
+    set_sub_blocks(0)
     score = 0
     running = True
+    fail = False
+    Boost = False
     pass
 
 
@@ -68,14 +80,19 @@ def exit():
 
 
 def update():
-    global blocks_type
+    global blocks_type, sub_blocks_type
     global score
+    global all_blocks, running, fail
     if running == True:
-       for block in blocks:
+       all_blocks = blocks + sub_blocks
+       for block in all_blocks:
            block.update()
            if block.y < 0 and block.type != -1:
                score += 1
                block.type = -1
+           if Boost == True:
+               block.update()
+               block.update()
 
        if move == True:
            if reverse == True:
@@ -93,15 +110,23 @@ def update():
        BlueBall.update()
        RedBall.update()
 
-       for block in blocks:
-           if block.left < BlueBall.x < block.right and block.bottom < BlueBall.y < block.top:
-               enter()
-           elif block.left < RedBall.x < block.right and block.bottom < RedBall.y < block.top:
-               enter()
+
+       for block in all_blocks:
+           if Boost == False:
+               if block.left < BlueBall.x < block.right and block.bottom < BlueBall.y < block.top:
+                   running = False
+                   fail = True
+               elif block.left < RedBall.x < block.right and block.bottom < RedBall.y < block.top:
+                   running = False
+                   fail = True
 
     if blocks[len(blocks) - 1].y < 0:
         blocks_type = random.randint(0, 9)
         set_blocks()
+
+    if sub_blocks[len(sub_blocks) - 1].y < 0:
+        sub_blocks_type = random.randint(0, 3)
+        set_sub_blocks(-1000)
     pass
 
 
@@ -113,8 +138,8 @@ def draw():
         blueball_effect.draw(BlueBall.trace_x[n], BlueBall.trace_y[n])
         redball_effect.draw(RedBall.trace_x[n], RedBall.trace_y[n])
 
-
-    for block in blocks:
+    all_blocks = blocks + sub_blocks
+    for block in all_blocks:
         block.Draw()
 
     text_image.draw(50,780)
@@ -126,7 +151,11 @@ def draw():
     font.draw(230, 775, '%4d' % (score), (128, 128, 255))
 
     if running == False:
-        pausemenu_image.draw(250,400)
+        if fail == True:
+            failmenu_image.draw(250, 400)
+            font.draw(320, 470, '%4d' % (score), (255, 128, 0))
+        else:
+            pausemenu_image.draw(250, 400)
     update_canvas()
     pass
 
@@ -135,6 +164,7 @@ def handle_events():
     events = get_events()
     global running
     global move,reverse
+    global Boost
     for event in events:
         if event.type == SDL_QUIT:
             game_framework.quit()
@@ -149,7 +179,10 @@ def handle_events():
                     game_framework.change_state(main_state)
             if 210 < event.x < 290 and 320 < 800 - event.y < 360:
                 if running == False:
-                    resume()
+                    if fail == False:
+                        resume()
+                    else:
+                        enter()
 
         else:
             if event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
@@ -162,6 +195,11 @@ def handle_events():
             elif event.type == SDL_KEYDOWN and event.key == SDLK_d:
                 move = True
                 reverse = True
+            elif event.type == SDL_KEYDOWN and event.key == SDLK_b:
+                if Boost == True:
+                    Boost = False
+                else:
+                    Boost = True
             elif event.type == SDL_KEYUP and event.key == SDLK_a:
                 if reverse == False:
                     move = False
@@ -186,13 +224,24 @@ def set_blocks():
     elif blocks_type == 5:
         blocks = [Block(100, 1100, 0), Block(180, 1200, 0), Block(450, 1300, 0), Block(380, 1550, 3), Block(70, 1320, 3), Block(150, 1750, 0), Block(400, 2000, 1), Block(100, 2250, 1), Block(0, 2300, -1)]
     elif blocks_type == 6:
-        blocks = [Block(100, 1000, 0), Block(300, 1250, 2), Block(100, 1500, 1), Block(400, 1750, 1), Block(200, 2000, 3), Block(400, 2200, 3), Block(100, 2200, 2), Block(450, 1500, 3), Block(0, 2300, -1)]
+        blocks = [Block(100, 1000, 0), Block(300, 1250, 2), Block(100, 1500, 1), Block(400, 1750, 1), Block(200, 2000, 3), Block(400, 2200, 3), Block(80, 2200, 2), Block(450, 1500, 3), Block(0, 2300, -1)]
     elif blocks_type == 7:
         blocks = [Block(250, 1300, 4), Block(80, 1800, 3), Block(130, 1850, 3), Block(180, 1900, 3), Block(400, 2100, 3), Block(350, 2150, 3), Block(300, 2200, 3), Block(20, 2100, 0), Block(0, 2300, -1)]
     elif blocks_type == 8:
         blocks = [Block(90, 1100, 2), Block(240, 1100, 2), Block(400, 1100, 2), Block(240, 1200, 2), Block(360, 1600, 1), Block(100, 1800, 0), Block(400, 2000, 0), Block(130, 2200, 1), Block(0, 2300, -1)]
     elif blocks_type == 9:
         blocks = [Block(125, 1000, 1), Block(250, 1250, 0), Block(125, 1500, 1), Block(425, 1700, 3), Block(75, 1850, 0), Block(375, 1950, 3), Block(400, 2100, 1), Block(125, 2270, 0), Block(0, 2300, -1)]
+
+def set_sub_blocks(start_y):
+    global sub_blocks
+    if sub_blocks_type == 0:
+        sub_blocks = [Block(250, start_y + 2650, 2), Block(250, start_y + 2800, 2), Block(250, start_y + 2950, 2), Block(0, start_y + 3300, -1), Block(0, start_y + 3300, -1)]
+    elif sub_blocks_type == 1:
+        sub_blocks = [Block(400, start_y + 2550, 0), Block(120, start_y + 2800, 0), Block(80, start_y + 2700, 0), Block(260, start_y + 3020, 0), Block(0, start_y + 3300, -1)]
+    elif sub_blocks_type == 2:
+        sub_blocks = [Block(260, start_y + 2550, 0), Block(260, start_y + 2800, 0), Block(350, start_y + 2870, 0), Block(50, start_y + 3050, 0), Block(0, start_y + 3300, -1)]
+    elif sub_blocks_type == 3:
+        sub_blocks = [Block(200, start_y + 2500, 0), Block(100, start_y + 2600, 0), Block(400, start_y + 2800, 1), Block(100, start_y + 3050, 1), Block(0, start_y + 3300, -1)]
 
 
 def pause():

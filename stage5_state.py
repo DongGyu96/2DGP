@@ -146,6 +146,8 @@ def handle_events():
             elif event.type == SDL_KEYDOWN and event.key == SDLK_d:
                 move = True
                 reverse = True
+            elif event.type == SDL_KEYDOWN and event.key == SDLK_m:
+                game_framework.push_state(stage6_state)
             elif event.type == SDL_KEYUP and event.key == SDLK_a:
                 if reverse == False:
                     move = False
