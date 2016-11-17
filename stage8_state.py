@@ -40,7 +40,7 @@ def enter():
     redball_effect = load_image('redball_effect.png')
     text_image = load_image('stage8.png')
     pausebutton_image = load_image('pausebutton.png')
-    image = load_image('background.png')
+    image = load_image('stage_background.png')
     RedBall = Ball(390, 150, 0)
     BlueBall = Ball(110, 150, 180)
     blocks = [Block(0, 1400, 4), Block(250, 2250, 4), Block(500, 1400, 4), Block(250, 1200, 2), Block(180, 1500, 2), Block(400, 3050, 4), Block(50, 2900, 3), Block(50, 3100, 3), Block(50, 3300, 3), Block(100, 3600, 1), Block(100, 3850, 1), Block(100, 4100, 1), Block(400, 4350, 1)]

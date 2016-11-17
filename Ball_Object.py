@@ -14,6 +14,7 @@ class Ball:
         for n in range(1, 10):
             self.trace_x[10 - n] = self.trace_x[9 - n]
             self.trace_y[10 - n] = self.trace_y[9 - n]
+            self.trace_y[10-n] -= 4
         self.trace_x[0] = self.x
         self.trace_y[0] = self.y
         self.count = 0

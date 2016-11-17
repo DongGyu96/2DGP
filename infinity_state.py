@@ -13,6 +13,8 @@ blueball = None
 redball = None
 blueball_effect = None
 redball_effect = None
+blueball_dead_image = None
+redball_dead_image = None
 pausebutton_image = None
 move = False
 reverse = True
@@ -30,14 +32,18 @@ font = None
 score = None
 fail = None
 Boost = None
+redball_dead = None
+blueball_dead = None
+count = None
+dead_animation_frame = None
 
 def enter():
     global image
     global text_image
     global pausebutton_image, failmenu_image
     global circle
-    global blueball, blueball_effect
-    global redball, redball_effect
+    global blueball, blueball_effect, blueball_dead_image
+    global redball, redball_effect, redball_dead_image
     global running, fail
     global RedBall, BlueBall, blocks, sub_blocks, all_blocks
     global pausemenu_image
@@ -45,6 +51,7 @@ def enter():
     global font
     global score
     global Boost
+    global blueball_dead, redball_dead, dead_animation_frame, count
     pausemenu_image = load_image('pause_image.png')
     circle = load_image('circle.png')
     blueball = load_image('blueball.png')
@@ -53,8 +60,10 @@ def enter():
     redball_effect = load_image('redball_effect.png')
     text_image = load_image('Infinity.png')
     pausebutton_image = load_image('pausebutton.png')
-    image = load_image('background.png')
+    image = load_image('stage_background.png')
     failmenu_image = load_image('Fail_image.png')
+    blueball_dead_image = load_image('blueball_dead_animation.png')
+    redball_dead_image = load_image('redball_dead_animation.png')
     font = load_font('KOVERWATCH.TTF', 30)
     blocks_type = random.randint(0, 9)
     sub_blocks_type = random.randint(0, 3)
@@ -63,10 +72,13 @@ def enter():
     set_blocks()
     set_sub_blocks(0)
     score = 0
+    count = 0
+    dead_animation_frame = 0
     running = True
     fail = False
     Boost = False
-    pass
+    redball_dead = False
+    blueball_dead = False
 
 
 def exit():
@@ -80,9 +92,9 @@ def exit():
 
 
 def update():
-    global blocks_type, sub_blocks_type
+    global blocks_type, sub_blocks_type, blueball_dead, redball_dead, dead_animation_frame
     global score
-    global all_blocks, running, fail
+    global all_blocks, running, fail, count
     if running == True:
        all_blocks = blocks + sub_blocks
        for block in all_blocks:
@@ -115,10 +127,10 @@ def update():
            if Boost == False:
                if block.left < BlueBall.x < block.right and block.bottom < BlueBall.y < block.top:
                    running = False
-                   fail = True
+                   blueball_dead = True
                elif block.left < RedBall.x < block.right and block.bottom < RedBall.y < block.top:
                    running = False
-                   fail = True
+                   redball_dead = True
 
     if blocks[len(blocks) - 1].y < 0:
         blocks_type = random.randint(0, 9)
@@ -127,7 +139,15 @@ def update():
     if sub_blocks[len(sub_blocks) - 1].y < 0:
         sub_blocks_type = random.randint(0, 3)
         set_sub_blocks(-1000)
-    pass
+
+    if running == False:
+        count += 1
+        if count == 6:
+            if blueball_dead == True or redball_dead == True:
+                dead_animation_frame += 1
+                count = 0
+                if dead_animation_frame == 10:
+                    fail = True
 
 
 def draw():
@@ -135,8 +155,10 @@ def draw():
     image.draw(250,400)
 
     for n in range(0 , 10):
-        blueball_effect.draw(BlueBall.trace_x[n], BlueBall.trace_y[n])
-        redball_effect.draw(RedBall.trace_x[n], RedBall.trace_y[n])
+        if blueball_dead == False:
+            blueball_effect.draw(BlueBall.trace_x[n], BlueBall.trace_y[n])
+        if redball_dead == False:
+            redball_effect.draw(RedBall.trace_x[n], RedBall.trace_y[n])
 
     all_blocks = blocks + sub_blocks
     for block in all_blocks:
@@ -145,8 +167,10 @@ def draw():
     text_image.draw(50,780)
     pausebutton_image.draw(470,770)
     circle.draw(250,150)
-    blueball.draw(BlueBall.x, BlueBall.y)
-    redball.draw(RedBall.x, RedBall.y)
+    if blueball_dead == False:
+        blueball.draw(BlueBall.x, BlueBall.y)
+    if redball_dead == False:
+        redball.draw(RedBall.x, RedBall.y)
 
     font.draw(230, 775, '%4d' % (score), (128, 128, 255))
 
@@ -154,6 +178,10 @@ def draw():
         if fail == True:
             failmenu_image.draw(250, 400)
             font.draw(320, 470, '%4d' % (score), (255, 128, 0))
+        elif blueball_dead == True:
+            blueball_dead_image.clip_draw(dead_animation_frame * 106, 0, 106, 106, BlueBall.x, BlueBall.y)
+        elif redball_dead == True:
+            redball_dead_image.clip_draw(dead_animation_frame * 106, 0, 106, 106, RedBall.x, RedBall.y)
         else:
             pausemenu_image.draw(250, 400)
     update_canvas()
