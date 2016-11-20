@@ -2,6 +2,7 @@ import game_framework
 import stage1_state
 import infinity_state
 from pico2d import *
+from Ball_Object import Ball
 
 
 name = "MainState"
@@ -12,6 +13,7 @@ stagebutton_image = None
 infinitybutton_image = None
 stagebutton_image2 = None
 infinitybutton_image2 = None
+bgm_ball = None
 
 
 def enter():
@@ -20,14 +22,18 @@ def enter():
     global infinitybutton_image
     global stagebutton_image2
     global infinitybutton_image2
+    global bgm_ball
     stagebutton_image2 = load_image('stagebutton2.png')
     infinitybutton_image2 = load_image('infinitybutton2.png')
     stagebutton_image = load_image('stagebutton.png')
     infinitybutton_image = load_image('infinitybutton.png')
     image = load_image('Title.png')
+    bgm_ball = Ball(0, 0, 0)
 
 
-def exit(): pass
+def exit():
+    global bgm_ball
+    del(bgm_ball)
 
 
 def update(): pass

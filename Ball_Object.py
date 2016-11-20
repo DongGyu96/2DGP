@@ -9,6 +9,9 @@ class Ball:
         self.trace_y = [y] * 10
         for n in range(0, 10):
             self.trace_y[n] = y - (n * 5)
+        self.bgm = load_music('title_bgm.mp3')
+        self.bgm.set_volume(64)
+        self.bgm.repeat_play()
 
     def update(self):
         for n in range(1, 10):
