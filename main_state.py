@@ -2,7 +2,7 @@ import game_framework
 import stage1_state
 import infinity_state
 from pico2d import *
-from BGM_Object import BGM
+from Ball_Object import Ball
 
 
 name = "MainState"
@@ -13,7 +13,7 @@ stagebutton_image = None
 infinitybutton_image = None
 stagebutton_image2 = None
 infinitybutton_image2 = None
-bgm = None
+bgm_ball = None
 
 
 def enter():
@@ -22,18 +22,18 @@ def enter():
     global infinitybutton_image
     global stagebutton_image2
     global infinitybutton_image2
-    global bgm
+    global bgm_ball
     stagebutton_image2 = load_image('stagebutton2.png')
     infinitybutton_image2 = load_image('infinitybutton2.png')
     stagebutton_image = load_image('stagebutton.png')
     infinitybutton_image = load_image('infinitybutton.png')
     image = load_image('Title.png')
-    bgm = BGM(0)
+    bgm_ball = Ball(0, 0, 0)
 
 
 def exit():
-    global bgm
-    del(bgm)
+    global bgm_ball
+    del(bgm_ball)
 
 
 def update(): pass
@@ -71,9 +71,9 @@ def handle_events():
                 infinitybutton = True
         elif event.type == SDL_MOUSEBUTTONDOWN and event.button == SDL_BUTTON_LEFT:
             if (event.x > 80 and event.x < 420) and (event.y > 450 and event.y < 530):
-                game_framework.change_state(stage1_state)
+                game_framework.push_state(stage1_state)
             elif (event.x > 80 and event.x < 420) and (event.y > 550 and event.y < 630):
-                game_framework.change_state(infinity_state)
+                game_framework.push_state(infinity_state)
         else:
             if event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
                 game_framework.quit()
