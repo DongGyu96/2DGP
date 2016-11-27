@@ -5,5 +5,7 @@ class BGM:
     def __init__(self, stage):
         if stage == BGM.TITLE:
             self.bgm = load_music('Virtual Riot - Energy Drink.mp3')
+        elif stage == BGM.INFINITY:
+            self.bgm = load_music('TheFatRat+-+Windfall.mp3')
         self.bgm.set_volume(64)
         self.bgm.repeat_play()

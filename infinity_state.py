@@ -4,6 +4,7 @@ import random
 from pico2d import *
 from Ball_Object import Ball
 from Block_Object import Block
+from BGM_Object import BGM
 
 name = "Infinity_State"
 image = None
@@ -36,6 +37,7 @@ redball_dead = None
 blueball_dead = None
 count = None
 dead_animation_frame = None
+bgm = None
 
 def enter():
     global image
@@ -51,7 +53,7 @@ def enter():
     global font
     global score
     global Boost
-    global blueball_dead, redball_dead, dead_animation_frame, count
+    global blueball_dead, redball_dead, dead_animation_frame, count, bgm
     pausemenu_image = load_image('pause_image.png')
     circle = load_image('circle.png')
     blueball = load_image('blueball.png')
@@ -79,13 +81,15 @@ def enter():
     Boost = False
     redball_dead = False
     blueball_dead = False
+    bgm = BGM(9)
 
 
 def exit():
     global blocks
-    global RedBall, BlueBall
+    global RedBall, BlueBall, bgm
     del(RedBall)
     del(BlueBall)
+    del(bgm)
     for block in blocks:
         del(block)
     pass
