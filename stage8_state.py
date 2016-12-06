@@ -40,17 +40,17 @@ def enter():
     global RedBall, BlueBall, blocks
     global pausemenu_image
     global blueball_dead, redball_dead, dead_animation_frame, count
-    pausemenu_image = load_image('pause_image.png')
-    circle = load_image('circle.png')
-    blueball = load_image('blueball.png')
-    redball = load_image('redball.png')
-    blueball_effect = load_image('blueball_effect.png')
-    redball_effect = load_image('redball_effect.png')
-    text_image = load_image('stage8.png')
-    pausebutton_image = load_image('pausebutton.png')
-    image = load_image('stage_background.png')
-    blueball_dead_image = load_image('blueball_dead_animation.png')
-    redball_dead_image = load_image('redball_dead_animation.png')
+    pausemenu_image = load_image('Resource/pause_image.png')
+    circle = load_image('Resource/circle.png')
+    blueball = load_image('Resource/blueball.png')
+    redball = load_image('Resource/redball.png')
+    blueball_effect = load_image('Resource/blueball_effect.png')
+    redball_effect = load_image('Resource/redball_effect.png')
+    text_image = load_image('Resource/stage8.png')
+    pausebutton_image = load_image('Resource/pausebutton.png')
+    image = load_image('Resource/stage_background.png')
+    blueball_dead_image = load_image('Resource/blueball_dead_animation.png')
+    redball_dead_image = load_image('Resource/redball_dead_animation.png')
     RedBall = Ball(390, 150, 0)
     BlueBall = Ball(110, 150, 180)
     blocks = [Block(0, 1400, 4), Block(250, 2250, 4), Block(500, 1400, 4), Block(250, 1200, 2), Block(180, 1500, 2), Block(400, 3050, 4), Block(50, 2900, 3), Block(50, 3100, 3), Block(50, 3300, 3), Block(100, 3600, 1), Block(100, 3850, 1), Block(100, 4100, 1), Block(400, 4350, 1)]

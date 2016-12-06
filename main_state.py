@@ -23,11 +23,11 @@ def enter():
     global stagebutton_image2
     global infinitybutton_image2
     global bgm
-    stagebutton_image2 = load_image('stagebutton2.png')
-    infinitybutton_image2 = load_image('infinitybutton2.png')
-    stagebutton_image = load_image('stagebutton.png')
-    infinitybutton_image = load_image('infinitybutton.png')
-    image = load_image('Title.png')
+    stagebutton_image2 = load_image('Resource/stagebutton2.png')
+    infinitybutton_image2 = load_image('Resource/infinitybutton2.png')
+    stagebutton_image = load_image('Resource/stagebutton.png')
+    infinitybutton_image = load_image('Resource/infinitybutton.png')
+    image = load_image('Resource/Title.png')
     bgm = BGM(0)
 
 

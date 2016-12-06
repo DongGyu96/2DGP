@@ -12,8 +12,8 @@ logo_time = 0.0
 def enter():
     global image
     global background_image
-    image = load_image('kpu_credit.png')
-    background_image = load_image('white_background.png')
+    image = load_image('Resource/kpu_credit.png')
+    background_image = load_image('Resource/white_background.png')
     pass
 
 
