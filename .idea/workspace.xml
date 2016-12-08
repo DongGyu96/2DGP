@@ -2,72 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e63c2f36-b924-466f-b50d-bf98f5afe9da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/11+Divide.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/500476_Stereo-Madness.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Bossfight+-+Milky+Ways.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DJVI+-+Back+On+Track.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Fail_image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Infinity.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/It's Our Fight.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KOVERWATCH.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OMFG - Hello.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pause_image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stage1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stage2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stage3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stage4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stage5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stage6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stage7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stage8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TheFatRat+-+Windfall.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Title.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virtual Riot - Energy Drink.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_effect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_end.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_type1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_type1_effect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_type2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_type2_effect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_type3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_type3_effect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_type4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/block_type4_effect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blueball.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blueball_dead_animation.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blueball_effect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/circle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/infinitybutton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/infinitybutton2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/kpu_credit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pausebutton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/redball.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/redball_dead_animation.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/redball_effect.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stage_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stagebutton.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stagebutton2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/title_bgm.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/white_background.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PPT/Thumbs.db" afterPath="$PROJECT_DIR$/PPT/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Thumbs.db" afterPath="$PROJECT_DIR$/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BGM_Object.py" afterPath="$PROJECT_DIR$/BGM_Object.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block_Object.py" afterPath="$PROJECT_DIR$/Block_Object.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/infinity_state.py" afterPath="$PROJECT_DIR$/infinity_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_state.py" afterPath="$PROJECT_DIR$/main_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stage1_state.py" afterPath="$PROJECT_DIR$/stage1_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stage2_state.py" afterPath="$PROJECT_DIR$/stage2_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stage3_state.py" afterPath="$PROJECT_DIR$/stage3_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stage4_state.py" afterPath="$PROJECT_DIR$/stage4_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stage5_state.py" afterPath="$PROJECT_DIR$/stage5_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stage6_state.py" afterPath="$PROJECT_DIR$/stage6_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stage7_state.py" afterPath="$PROJECT_DIR$/stage7_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stage8_state.py" afterPath="$PROJECT_DIR$/stage8_state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start_state.py" afterPath="$PROJECT_DIR$/start_state.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/duet_game.py" afterPath="$PROJECT_DIR$/duet_game.py" />
     </list>
     <ignored path="2D 게임 프로그래밍.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,7 +27,7 @@
       <file leaf-file-name="stage7_state.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage7_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
+            <state relative-caret-position="874">
               <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -102,7 +39,7 @@
       <file leaf-file-name="stage8_state.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage8_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
+            <state relative-caret-position="494">
               <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -111,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start_state.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="start_state.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/start_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="594">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -126,7 +63,7 @@
       <file leaf-file-name="stage4_state.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage4_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
+            <state relative-caret-position="893">
               <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -138,7 +75,7 @@
       <file leaf-file-name="stage2_state.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage2_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
+            <state relative-caret-position="741">
               <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -150,7 +87,7 @@
       <file leaf-file-name="stage5_state.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage5_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
+            <state relative-caret-position="798">
               <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -171,13 +108,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stage1_state.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stage1_state.py">
+      <file leaf-file-name="duet_game.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/duet_game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="209">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,7 +123,7 @@
       <file leaf-file-name="stage6_state.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage6_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1136">
+            <state relative-caret-position="912">
               <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -198,7 +135,7 @@
       <file leaf-file-name="stage3_state.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stage3_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-927">
+            <state relative-caret-position="779">
               <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -223,7 +160,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/stage7_stage.py" />
-        <option value="$PROJECT_DIR$/duet_game.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/pico2d.py" />
         <option value="$PROJECT_DIR$/Ball_Object.py" />
         <option value="$PROJECT_DIR$/BGM_Object.py" />
@@ -239,6 +175,7 @@
         <option value="$PROJECT_DIR$/stage7_state.py" />
         <option value="$PROJECT_DIR$/stage8_state.py" />
         <option value="$PROJECT_DIR$/start_state.py" />
+        <option value="$PROJECT_DIR$/duet_game.py" />
       </list>
     </option>
   </component>
@@ -274,6 +211,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,11 +232,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Python.duet_game">
     <configuration default="false" name="duet_game" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -485,7 +424,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25608465" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -521,11 +460,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/infinitybutton.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/infinitybutton.png" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/pico2d.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3401">
@@ -533,11 +468,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kpu_credit.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/kpu_credit.png" />
     <entry file="file://$PROJECT_DIR$/duet_game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -559,11 +490,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/white_background.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/white_background.png" />
     <entry file="file://$PROJECT_DIR$/main_state.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1596">
@@ -576,7 +503,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -588,11 +515,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kpu_credit.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/kpu_credit.png" />
     <entry file="file://$PROJECT_DIR$/duet_game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -614,11 +537,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/white_background.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/white_background.png" />
     <entry file="file://$PROJECT_DIR$/main_state.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1596">
@@ -631,16 +550,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kpu_credit.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/kpu_credit.png" />
     <entry file="file://$PROJECT_DIR$/duet_game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -648,72 +563,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kpu_credit.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pausebutton.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/white_background.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/infinitybutton2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/infinitybutton.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stagebutton.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/kpu_credit.png" />
+    <entry file="file://$PROJECT_DIR$/pausebutton.png" />
+    <entry file="file://$PROJECT_DIR$/white_background.png" />
+    <entry file="file://$PROJECT_DIR$/infinitybutton2.png" />
+    <entry file="file://$PROJECT_DIR$/infinitybutton.png" />
+    <entry file="file://$PROJECT_DIR$/stagebutton.png" />
     <entry file="file://$PROJECT_DIR$/stage7_stage.py" />
-    <entry file="file://$PROJECT_DIR$/block_type4.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/block_type3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/block_type2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/block_type1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/block.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/block_type4_effect.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Infinity.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/block_type4.png" />
+    <entry file="file://$PROJECT_DIR$/block_type3.png" />
+    <entry file="file://$PROJECT_DIR$/block_type2.png" />
+    <entry file="file://$PROJECT_DIR$/block_type1.png" />
+    <entry file="file://$PROJECT_DIR$/block.png" />
+    <entry file="file://$PROJECT_DIR$/block_type4_effect.png" />
+    <entry file="file://$PROJECT_DIR$/Infinity.png" />
     <entry file="file://$PROJECT_DIR$/2015180030">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -733,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -749,15 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1064">
           <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/duet_game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="878">
           <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,6 +624,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage1_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#21#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage2_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage3_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage4_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage5_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage6_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage7_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stage8_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -789,92 +727,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stage1_state.py">
+    <entry file="file://$PROJECT_DIR$/duet_game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="209">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage2_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage3_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-927">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage4_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage5_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage6_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1136">
-          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage7_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stage8_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
