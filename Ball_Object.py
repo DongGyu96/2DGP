@@ -11,6 +11,8 @@ class Ball:
             self.trace_y[n] = y - (n * 5)
 
     def update(self):
+        self.x = 250 + (math.cos(self.angle * math.pi / 180.0) * 140)
+        self.y = 150 + (math.sin(self.angle * math.pi / 180.0) * 140)
         for n in range(1, 10):
             self.trace_x[10 - n] = self.trace_x[9 - n]
             self.trace_y[10 - n] = self.trace_y[9 - n]

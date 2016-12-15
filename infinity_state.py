@@ -106,9 +106,6 @@ def update():
            if block.y < 0 and block.type != -1:
                score += 1
                block.type = -1
-           if Boost == True:
-               block.update()
-               block.update()
 
        if move == True:
            if reverse == True:
@@ -117,11 +114,6 @@ def update():
            elif reverse == False:
                BlueBall.move(False)
                RedBall.move(False)
-
-       BlueBall.x = 250 + (math.cos(BlueBall.angle * math.pi / 180.0) * 140)
-       BlueBall.y = 150 + (math.sin(BlueBall.angle * math.pi / 180.0) * 140)
-       RedBall.x = 250 + (math.cos(RedBall.angle * math.pi / 180.0) * 140)
-       RedBall.y = 150 + (math.sin(RedBall.angle * math.pi / 180.0) * 140)
 
        BlueBall.update()
        RedBall.update()

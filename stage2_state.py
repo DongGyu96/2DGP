@@ -6,6 +6,7 @@ import stage1_state
 from pico2d import *
 from Ball_Object import Ball
 from Block_Object import Block
+from BGM_Object import BGM
 
 name = "Stage2_State"
 image = None
@@ -29,6 +30,7 @@ count = None
 dead_animation_frame = None
 blueball_dead_image = None
 redball_dead_image = None
+bgm = None
 
 def enter():
     global image
@@ -41,6 +43,7 @@ def enter():
     global RedBall, BlueBall, blocks
     global pausemenu_image
     global blueball_dead, redball_dead, dead_animation_frame, count
+    global bgm
     pausemenu_image = load_image('Resource/pause_image.png')
     circle = load_image('Resource/circle.png')
     blueball = load_image('Resource/blueball.png')
@@ -58,6 +61,7 @@ def enter():
     running = True
     count = 0
     dead_animation_frame = 0
+    bgm = BGM(2)
     redball_dead = False
     blueball_dead = False
 
@@ -65,6 +69,8 @@ def enter():
 def exit():
     global blocks
     global RedBall, BlueBall
+    global bgm
+    del(bgm)
     del(RedBall)
     del(BlueBall)
     for block in blocks:
@@ -85,11 +91,6 @@ def update():
            elif reverse == False:
                BlueBall.move(False)
                RedBall.move(False)
-
-       BlueBall.x = 250 + (math.cos(BlueBall.angle * math.pi / 180.0) * 140)
-       BlueBall.y = 150 + (math.sin(BlueBall.angle * math.pi / 180.0) * 140)
-       RedBall.x = 250 + (math.cos(RedBall.angle * math.pi / 180.0) * 140)
-       RedBall.y = 150 + (math.sin(RedBall.angle * math.pi / 180.0) * 140)
 
        BlueBall.update()
        RedBall.update()
