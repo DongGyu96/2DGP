@@ -61,7 +61,7 @@ class Block:
         self.effect_image.draw(self.x, self.y + 20)
         self.image.draw(self.x, self.y)
 
-    def update(self):
-        self.y -= 4
-        self.bottom -= 4
-        self.top -= 4
+    def update(self, frame_time):
+        self.y -= frame_time * 200
+        self.bottom -= frame_time * 200
+        self.top -= frame_time * 200

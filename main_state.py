@@ -36,10 +36,10 @@ def exit():
     del(bgm)
 
 
-def update(): pass
+def update(frame_time): pass
 
 
-def draw():
+def draw(frame_time):
     clear_canvas()
     image.draw(250,400)
     if stagebutton == True:
@@ -55,7 +55,7 @@ def draw():
 
 
 
-def handle_events():
+def handle_events(frame_time):
     global stagebutton
     global infinitybutton
     events = get_events()

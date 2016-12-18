@@ -78,22 +78,22 @@ def exit():
     pass
 
 
-def update():
+def update(frame_time):
     global blueball_dead, redball_dead, dead_animation_frame, count, running
     if running == True:
        for block in blocks:
-           block.update()
+           block.update(frame_time)
 
        if move == True:
            if reverse == True:
-               BlueBall.move(True)
-               RedBall.move(True)
+               BlueBall.move(True, frame_time)
+               RedBall.move(True, frame_time)
            elif reverse == False:
-               BlueBall.move(False)
-               RedBall.move(False)
+               BlueBall.move(False, frame_time)
+               RedBall.move(False, frame_time)
 
-       BlueBall.update()
-       RedBall.update()
+       BlueBall.update(frame_time)
+       RedBall.update(frame_time)
 
        for block in blocks:
            if block.left < BlueBall.x < block.right and block.bottom < BlueBall.y < block.top:
@@ -116,7 +116,7 @@ def update():
                     enter()
 
 
-def draw():
+def draw(frame_time):
     clear_canvas()
     image.draw(250,400)
 
@@ -149,7 +149,7 @@ def draw():
     pass
 
 
-def handle_events():
+def handle_events(frame_time):
     events = get_events()
     global running
     global move,reverse

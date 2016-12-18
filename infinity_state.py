@@ -38,6 +38,8 @@ blueball_dead = None
 count = None
 dead_animation_frame = None
 bgm = None
+speed = 1
+time = 0
 
 def enter():
     global image
@@ -54,6 +56,7 @@ def enter():
     global score
     global Boost
     global blueball_dead, redball_dead, dead_animation_frame, count, bgm
+    global time, speed
     pausemenu_image = load_image('Resource/pause_image.png')
     circle = load_image('Resource/circle.png')
     blueball = load_image('Resource/blueball.png')
@@ -82,6 +85,8 @@ def enter():
     redball_dead = False
     blueball_dead = False
     bgm = BGM(9)
+    time = 0
+    speed = 1
 
 
 def exit():
@@ -95,28 +100,30 @@ def exit():
     pass
 
 
-def update():
+def update(frame_time):
     global blocks_type, sub_blocks_type, blueball_dead, redball_dead, dead_animation_frame
     global score
     global all_blocks, running, fail, count
+    global speed
+    global time
     if running == True:
        all_blocks = blocks + sub_blocks
        for block in all_blocks:
-           block.update()
+           block.update(frame_time * speed)
            if block.y < 0 and block.type != -1:
                score += 1
                block.type = -1
 
        if move == True:
            if reverse == True:
-               BlueBall.move(True)
-               RedBall.move(True)
+               BlueBall.move(True, frame_time * speed)
+               RedBall.move(True, frame_time * speed)
            elif reverse == False:
-               BlueBall.move(False)
-               RedBall.move(False)
+               BlueBall.move(False, frame_time * speed)
+               RedBall.move(False, frame_time * speed)
 
-       BlueBall.update()
-       RedBall.update()
+       BlueBall.update(frame_time * speed)
+       RedBall.update(frame_time * speed)
 
 
        for block in all_blocks:
@@ -127,6 +134,10 @@ def update():
                elif block.left < RedBall.x < block.right and block.bottom < RedBall.y < block.top:
                    running = False
                    redball_dead = True
+       time += frame_time
+       if time > 25:
+           speed += 0.1
+           time -= 25
 
     if blocks[len(blocks) - 1].y < 0:
         blocks_type = random.randint(0, 9)
@@ -145,8 +156,7 @@ def update():
                 if dead_animation_frame == 10:
                     fail = True
 
-
-def draw():
+def draw(frame__time):
     clear_canvas()
     image.draw(250,400)
 
@@ -184,7 +194,7 @@ def draw():
     pass
 
 
-def handle_events():
+def handle_events(frame_time):
     events = get_events()
     global running
     global move,reverse

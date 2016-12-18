@@ -10,19 +10,19 @@ class Ball:
         for n in range(0, 10):
             self.trace_y[n] = y - (n * 5)
 
-    def update(self):
+    def update(self, frame_time):
         self.x = 250 + (math.cos(self.angle * math.pi / 180.0) * 140)
         self.y = 150 + (math.sin(self.angle * math.pi / 180.0) * 140)
         for n in range(1, 10):
             self.trace_x[10 - n] = self.trace_x[9 - n]
             self.trace_y[10 - n] = self.trace_y[9 - n]
-            self.trace_y[10-n] -= 4
+            self.trace_y[10-n] -= frame_time * 200
         self.trace_x[0] = self.x
         self.trace_y[0] = self.y
         self.count = 0
 
-    def move(self, reverse):
+    def move(self, reverse, frame_time):
         if reverse == True:
-            self.angle -= 3.6
+            self.angle -= frame_time * 180
         elif reverse == False:
-            self.angle += 3.6
+            self.angle += frame_time * 180
