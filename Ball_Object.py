@@ -22,7 +22,7 @@ class Ball:
         self.count = 0
 
     def move(self, reverse, frame_time):
-        if reverse == True:
+        if reverse:
             self.angle -= frame_time * 180
-        elif reverse == False:
+        elif not reverse:
             self.angle += frame_time * 180

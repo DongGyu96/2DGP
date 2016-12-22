@@ -106,7 +106,7 @@ def update(frame_time):
     global all_blocks, running, fail, count
     global speed
     global time
-    if running == True:
+    if running:
        all_blocks = blocks + sub_blocks
        for block in all_blocks:
            block.update(frame_time * speed)
@@ -114,11 +114,11 @@ def update(frame_time):
                score += 1
                block.type = -1
 
-       if move == True:
-           if reverse == True:
+       if move:
+           if reverse:
                BlueBall.move(True, frame_time * speed)
                RedBall.move(True, frame_time * speed)
-           elif reverse == False:
+           elif not reverse:
                BlueBall.move(False, frame_time * speed)
                RedBall.move(False, frame_time * speed)
 
@@ -127,13 +127,12 @@ def update(frame_time):
 
 
        for block in all_blocks:
-           if Boost == False:
-               if block.left < BlueBall.x < block.right and block.bottom < BlueBall.y < block.top:
-                   running = False
-                   blueball_dead = True
-               elif block.left < RedBall.x < block.right and block.bottom < RedBall.y < block.top:
-                   running = False
-                   redball_dead = True
+           if block.left < BlueBall.x < block.right and block.bottom < BlueBall.y < block.top:
+               running = False
+               blueball_dead = True
+           elif block.left < RedBall.x < block.right and block.bottom < RedBall.y < block.top:
+               running = False
+               redball_dead = True
        time += frame_time
        if time > 25:
            speed += 0.1
@@ -147,10 +146,10 @@ def update(frame_time):
         sub_blocks_type = random.randint(0, 3)
         set_sub_blocks(-1000)
 
-    if running == False:
+    if not running:
         count += 1
         if count == 6:
-            if blueball_dead == True or redball_dead == True:
+            if blueball_dead or redball_dead:
                 dead_animation_frame += 1
                 count = 0
                 if dead_animation_frame == 10:
@@ -161,9 +160,9 @@ def draw(frame__time):
     image.draw(250,400)
 
     for n in range(0 , 10):
-        if blueball_dead == False:
+        if not blueball_dead:
             blueball_effect.draw(BlueBall.trace_x[n], BlueBall.trace_y[n])
-        if redball_dead == False:
+        if not redball_dead:
             redball_effect.draw(RedBall.trace_x[n], RedBall.trace_y[n])
 
     all_blocks = blocks + sub_blocks
@@ -173,20 +172,20 @@ def draw(frame__time):
     text_image.draw(50,780)
     pausebutton_image.draw(470,770)
     circle.draw(250,150)
-    if blueball_dead == False:
+    if not blueball_dead:
         blueball.draw(BlueBall.x, BlueBall.y)
-    if redball_dead == False:
+    if not redball_dead:
         redball.draw(RedBall.x, RedBall.y)
 
     font.draw(230, 775, '%4d' % (score), (128, 128, 255))
 
-    if running == False:
-        if fail == True:
+    if not running:
+        if fail:
             failmenu_image.draw(250, 400)
             font.draw(320, 470, '%4d' % (score), (255, 128, 0))
-        elif blueball_dead == True:
+        elif blueball_dead:
             blueball_dead_image.clip_draw(dead_animation_frame * 106, 0, 106, 106, BlueBall.x, BlueBall.y)
-        elif redball_dead == True:
+        elif redball_dead:
             redball_dead_image.clip_draw(dead_animation_frame * 106, 0, 106, 106, RedBall.x, RedBall.y)
         else:
             pausemenu_image.draw(250, 400)
@@ -204,16 +203,16 @@ def handle_events(frame_time):
             game_framework.quit()
         elif event.type == SDL_MOUSEBUTTONDOWN and event.button == SDL_BUTTON_LEFT:
             if 450 < event.x < 490 and 750 < 800 - event.y < 790:
-                if running == False:
+                if not running:
                     resume()
                 else:
                     pause()
             if 180 < event.x < 320 and 375 < 800 - event.y < 425:
-                if running == False:
+                if not running:
                     game_framework.change_state(main_state)
             if 210 < event.x < 290 and 320 < 800 - event.y < 360:
-                if running == False:
-                    if fail == False:
+                if not running:
+                    if not fail:
                         resume()
                     else:
                         enter()

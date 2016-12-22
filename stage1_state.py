@@ -121,9 +121,9 @@ def draw(frame_time):
     image.draw(250,400)
 
     for n in range(0 , 10):
-        if blueball_dead == False:
+        if not blueball_dead:
             blueball_effect.draw(BlueBall.trace_x[n], BlueBall.trace_y[n])
-        if redball_dead == False:
+        if not redball_dead:
             redball_effect.draw(RedBall.trace_x[n], RedBall.trace_y[n])
 
 
@@ -133,15 +133,15 @@ def draw(frame_time):
     text_image.draw(50,780)
     pausebutton_image.draw(470,770)
     circle.draw(250,150)
-    if blueball_dead == False:
+    if not blueball_dead:
         blueball.draw(BlueBall.x, BlueBall.y)
-    if redball_dead == False:
+    if not redball_dead:
         redball.draw(RedBall.x, RedBall.y)
 
-    if running == False:
-        if blueball_dead == True:
+    if not running:
+        if blueball_dead:
             blueball_dead_image.clip_draw(dead_animation_frame * 106, 0, 106, 106, BlueBall.x, BlueBall.y)
-        elif redball_dead == True:
+        elif redball_dead:
             redball_dead_image.clip_draw(dead_animation_frame * 106, 0, 106, 106, RedBall.x, RedBall.y)
         else:
             pausemenu_image.draw(250, 400)
