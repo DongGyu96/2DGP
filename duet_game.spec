@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['duet_game.py'],
-             pathex=['C:\\Users\\DongGyu\\Documents\\2015180030 LeeDongGyu\\2DGP'],
+             pathex=['C:\\Users\\PC\\Desktop\\±îÄ¡\\2DGP'],
              binaries=None,
              datas=None,
              hiddenimports=[],
